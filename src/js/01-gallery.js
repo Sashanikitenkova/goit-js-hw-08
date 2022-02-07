@@ -29,7 +29,7 @@ function createGallery (images) {
     .join('');  
 }
 
-    const gallery = new SimpleLightbox('.gallery a', {captionsData: 'alt'});
+    const gallery = new SimpleLightbox('.gallery a', {captionsData: 'alt', captionDelay: 250});
 
     // container.addEventListener("click", gallery.next());
 

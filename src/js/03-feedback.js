@@ -27,7 +27,7 @@ refs.form.addEventListener('input', e => {
 populateTextarea();
 
 function onFormSubmit(evt) {
-    evt.preventDefault();
+    evt.target.name.preventDefault();
     evt.currentTarget.reset();
     localStorage.removeItem(STORAGE_KEY);
 };
