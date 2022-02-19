@@ -4,7 +4,10 @@ import '../css/03-feedback.css';
 
 const STORAGE_KEY = 'feedback-form-state';
 
-const formData = {};
+const formData = {
+    email: '',
+    message: '',
+};
 
 const refs = {
     form: document.querySelector('.feedback-form'),
@@ -51,10 +54,11 @@ function onTextareaInput(e) {
 
 function populateTextarea() {
     const savedMessage = localStorage.getItem(STORAGE_KEY);
+    console.log(savedMessage); 
     const parsedData = JSON.parse(savedMessage);
 
     if(parsedData) {
-        console.log(parsedData); 
+        // console.log(parsedData); 
         refs.textarea.value = parsedData.message;
         refs.input.value = parsedData.email;
     };
